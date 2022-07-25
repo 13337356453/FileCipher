@@ -118,7 +118,8 @@ class Cipher:
         # 数据拼接
         q=m+o
         for r in q:
-            result+=chr(r)
+            if not r==0:
+                result+=chr(r)
         # 返回结果
         return result
 
